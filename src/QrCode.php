@@ -1393,7 +1393,7 @@ class QrCode
             }
             $font_box = imagettfbbox($this->label_font_size, 0, $this->label_font_path, $this->label);
             $label_width = (int) $font_box[2] - (int) $font_box[0];
-            $label_height = (int) $font_box[0] - (int) $font_box[7];
+            $label_height = (int) $font_box[1] - (int) $font_box[7];
 
             if ($this->label_valign == self::LABEL_VALIGN_MIDDLE) {
                 $image_height += $label_height + $this->padding;
